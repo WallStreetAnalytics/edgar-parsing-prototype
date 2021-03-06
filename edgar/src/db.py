@@ -10,7 +10,7 @@ def initialize() -> NoReturn:
     connect(
         os.getenv("MONGODB_DATABASE", ""),
         host=os.getenv("MONGODB_HOST", ""),
-        port=os.getenv("MONGODB_PORT", 27017),
+        port=int(os.getenv("MONGODB_PORT", 27017)),
         username=os.getenv("MONGODB_USER", ""),
         password=os.getenv("MONGODB_PASS", ""),
     )
